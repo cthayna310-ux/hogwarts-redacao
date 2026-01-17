@@ -1,0 +1,50 @@
+const nome = localStorage.getItem("nome");
+const casa = localStorage.getItem("casa");
+let fase = parseInt(localStorage.getItem("fase"));
+let pontos = parseInt(localStorage.getItem("pontos"));
+
+document.getElementById("status").innerText =
+`🧙 ${nome} | Casa: ${casa} | ⭐ Pontos: ${pontos}`;
+
+const fases = [
+  {
+    titulo: "📜 FASE 1 – Introdução",
+    texto: "Escreva uma introdução sobre os impactos das redes sociais na saúde mental dos jovens."
+  },
+  {
+    titulo: "🧪 FASE 2 – Argumentação",
+    texto: "Desenvolva um argumento com explicação e exemplo."
+  },
+  {
+    titulo: "🔗 FASE 3 – Coesão",
+    texto: "Reescreva um trecho usando conectivos adequados."
+  },
+  {
+    titulo: "🏛️ FASE 4 – Conclusão",
+    texto: "Crie uma conclusão com proposta de intervenção completa."
+  }
+];
+
+document.getElementById("faseTitulo").innerText = fases[fase-1].titulo;
+document.getElementById("faseTexto").innerText = fases[fase-1].texto;
+
+function avaliar(){
+  let texto = resposta.value;
+
+  if(texto.length < 200){
+    feedback.innerText = "❌ Texto muito curto. Tente novamente.";
+    return;
+  }
+
+  pontos += 10;
+  fase++;
+
+  localStorage.setItem("pontos", pontos);
+  localStorage.setItem("fase", fase);
+
+  if(fase > 4){
+    location.href = "final.html";
+  } else {
+    location.reload();
+  }
+}
