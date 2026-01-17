@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Hogwarts – Redação Mágica</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🏰 Hogwarts – Redação Mágica</h1>
+<p>Entre para Hogwarts e prove que domina a arte da redação.</p>
+
+<input id="nome" placeholder="Nome do bruxo(a)">
+<select id="casa">
+  <option>Grifinória</option>
+  <option>Corvinal</option>
+  <option>Lufa-Lufa</option>
+  <option>Sonserina</option>
+</select>
+
+<button onclick="iniciar()">Entrar em Hogwarts ✨</button>
+
+<script>
+function iniciar(){
+  localStorage.setItem("nome", nome.value);
+  localStorage.setItem("casa", casa.value);
+  localStorage.setItem("fase", 1);
+  localStorage.setItem("pontos", 0);
+  location.href = "game.html";
+}
+</script>
+
+</body>
+</html>

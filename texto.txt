@@ -1,0 +1,6 @@
+hogwarts-redacao/
+ ├── index.html
+ ├── game.html
+ ├── final.html
+ ├── style.css
+ └── game.js

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Desafio da Redação</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2 id="status"></h2>
+<h3 id="faseTitulo"></h3>
+<p id="faseTexto"></p>
+
+<textarea id="resposta" rows="8"></textarea><br>
+<button onclick="avaliar()">Enviar Feitiço ✨</button>
+
+<p id="feedback"></p>
+
+<script src="game.js"></script>
+</body>
+</html>

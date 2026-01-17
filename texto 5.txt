@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultado Final</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🏆 Exame Final Concluído!</h1>
+<p id="resultado"></p>
+
+<script>
+const nome = localStorage.getItem("nome");
+const casa = localStorage.getItem("casa");
+const pontos = localStorage.getItem("pontos");
+
+document.getElementById("resultado").innerText =
+`Parabéns ${nome} da ${casa}! 
+Você concluiu o Desafio da Redação Mágica com ${pontos} pontos!`;
+</script>
+
+</body>
+</html>
